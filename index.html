@@ -96,8 +96,8 @@ function quantityHandler(isIncrease, productName){
          let phoneTotal = parseInt(document.getElementById('phonePrice').innerText);
          let caseTotal = parseInt(document.getElementById('casePrice').innerText);
 
-         let subTotal = phoneTotal + caseTotal;
-         let tax = (subTotal*0.1).toFixed(2);
+         let subTotal = parseInt(phoneTotal + caseTotal);
+         let tax = parseFloat((subTotal*0.1).toFixed(2));
          let totalPrice = subTotal + tax;
 
          document.getElementById('subTotal').innerText = subTotal;
